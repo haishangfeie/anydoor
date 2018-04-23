@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="{{styleUrl}}">
+  <style>
+    @charset 'utf-8';
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+
+    /* 头部标题 */
+
+    .top-title {
+      text-align: center;
+    }
+
+
+    /* 主体 */
+
+    .showdir-container {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .showdir-container__item {
+      display: block;
+      float: left;
+      width:80px;
+      padding: 10px 20px 20px 0;
+      margin-right:10px;
+      overflow: hidden;
+      -webkit-transition: opacity, -webkit-transform 0.5s;
+      transition: opacity, -webkit-transform 0.5s;
+      -o-transition: opacity, -o-transform 0.5s;
+      -moz-transition: opacity, transform 0.5s, -moz-transform 0.5s;
+      transition: opacity, transform 0.5s;
+      transition: opacity, transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .showdir-container__item:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+
+    .showdir-container__item img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .showdir-container__item p {
+      width: 80px;
+      height: 40px;
+      margin:0 auto;
+      color: #2e81d4;
+      word-wrap:break-word;
+
+    }
+
+    .showdir-container__item:hover p {
+      color: #abcdef;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="top-title">{{title}}</h1>
+  <div class="showdir-container">
+    {{each files file}}
+    <a href="{{dir}}/{{file.name}}" class="showdir-container__item">
+      <img src="{{file.imgUrl}}">
+      <p>{{file.name}}</p>
+    </a>
+    {{/each}}
+  </div>
+</body>
+
+</html>

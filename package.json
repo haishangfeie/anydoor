@@ -1,0 +1,33 @@
+{
+  "name": "anydoor",
+  "version": "0.0.1",
+  "description": "Tiny Node.JS Static Web Server",
+  "main": "./src/app.js",
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haishangfeie/anydoor.git"
+  },
+  "author": "wenxingjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haishangfeie/anydoor/issues"
+  },
+  "homepage": "https://github.com/haishangfeie/anydoor#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "chalk": "^2.4.0"
+  }
+}
